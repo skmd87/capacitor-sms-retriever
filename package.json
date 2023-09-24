@@ -1,5 +1,5 @@
 {
-  "name": "@skmd/capacitor-sms-retriever",
+  "name": "@skmd87/capacitor-sms-retriever",
   "version": "0.0.1",
   "description": "Capacitor plugin to retrieve SMS on Android",
   "main": "dist/plugin.cjs.js",
@@ -38,7 +38,7 @@
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
     "swiftlint": "node-swiftlint",
     "docgen": "docgen --project tsconfig.json --api SmsRetrieverPlugin --output-readme README.md --output-json dist/docs.json",
-    "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
+    "build": "npm run clean && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build"
