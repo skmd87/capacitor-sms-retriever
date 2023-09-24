@@ -1,10 +1,13 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { SmsRetrieverPlugin } from './definitions';
+import type { CapacitorSmsRetrieverPlugin, StartSuccessResponse, } from './definitions';
 
-export class SmsRetrieverWeb extends WebPlugin implements SmsRetrieverPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+export class CapacitorSmsRetrieverWeb extends WebPlugin implements CapacitorSmsRetrieverPlugin {
+  async startListening(): Promise<StartSuccessResponse> {
+    console.warn('Capacitor SMS Retriever not available on web');
+    return Promise.resolve({ body: 'Capacitor SMS Retriever not available on web' });
+  }
+  async stopListening(): Promise<void> {
+    return Promise.reject(new Error('Capacitor SMS Retriever not available on web'));
   }
 }

@@ -1,19 +1,20 @@
-# @skmd/capacitor-sms-retriever
+# Capacitor Sms Retriever
 
-d
+Under development plugin for retriving SMS without the need of any permission.
 
-## Install
+CURRENTLY FOR ANDROID ONLY
 
-```bash
-npm install @skmd/capacitor-sms-retriever
-npx cap sync
-```
+`npm install @skmd/capacitor-sms-retriever`
 
-## API
-
-<docgen-index></docgen-index>
-
-<docgen-api>
-<!-- run docgen to generate docs from the source -->
-<!-- More info: https://github.com/ionic-team/capacitor-docgen -->
-</docgen-api>
+##Usage 
+`
+import { CapacitorSmsRetriever, } from "@skmd/capacitor-sms-retriever"
+.
+.
+.
+CapacitorSmsRetriever.startListening().then((res:any) => {
+		console.log("SMS Content", res.body);
+	}).catch((err:any) => {
+		console.log("Failed", err);
+	});
+`

@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { SmsRetrieverPlugin } from './definitions';
+import type { CapacitorSmsRetrieverPlugin } from './definitions';
 
-const SmsRetriever = registerPlugin<SmsRetrieverPlugin>('SmsRetriever', {
-  web: () => import('./web').then(m => new m.SmsRetrieverWeb()),
+const CapacitorSmsRetriever = registerPlugin<CapacitorSmsRetrieverPlugin>('CapacitorSmsRetriever', {
+  web: () => import('./web').then(m => new m.CapacitorSmsRetrieverWeb()),
 });
 
 export * from './definitions';
-export { SmsRetriever };
+export { CapacitorSmsRetriever };
