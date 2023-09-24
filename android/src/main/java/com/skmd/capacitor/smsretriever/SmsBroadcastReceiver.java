@@ -41,9 +41,7 @@ public class SmsBroadcastReceiver extends BroadcastReceiver {
                 case CommonStatusCodes.TIMEOUT:
                     // Waiting for SMS timed out (5 minutes)
                     Log.d(TAG, "SMS Retriever timeout");
-                    JSObject error = new JSObject();
-                    error.put("reason", "TIMEOUT");
-                    CALL.reject(error);
+                    CALL.reject("TIMEOUT");
                     break;
             }
         }
