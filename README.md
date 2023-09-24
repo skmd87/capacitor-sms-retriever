@@ -4,11 +4,11 @@ Under development plugin for retriving SMS without the need of any permission. S
 
 CURRENTLY FOR ANDROID ONLY
 
-`npm install @skmd/capacitor-sms-retriever`
+`npm install @skmd87/capacitor-sms-retriever`
 
 ## Usage 
 ```
-import { CapacitorSmsRetriever, } from "@skmd/capacitor-sms-retriever";
+import { CapacitorSmsRetriever, } from "@skmd87/capacitor-sms-retriever";
 .
 .
 .
